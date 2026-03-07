@@ -1,62 +1,42 @@
 # SMCar
-✅ Nome do Projeto
-Dê um nome claro e criativo. Isso ajuda a identificar seu projeto de forma única e memorável.
+# 📚 Nome do Projeto
 
-✅ Descrição do Projeto
-Explique o que é o projeto, o que ele faz e com quais tecnologias foi construído. Essa é a primeira informação que quem visita seu repositório vai ler, então seja direto e objetivo.
+Breve descrição do projeto.  
+Exemplo: Este projeto consiste no desenvolvimento de um site institucional para fins educacionais, simulando um projeto real para um cliente.
 
-✅ Funcionalidades do Projeto
-Liste as principais funcionalidades de forma simples:
+---
 
-Cadastro de usuários
-Upload de arquivos
-Autenticação com Google
-Exibição de gráficos em tempo real
-✅ Testes de Software
-Descreva os testes realizados:
+# 📌 Sobre o Projeto
 
-Teste de depuração (bugs corrigidos)
-Teste de funcionamento (validação das funcionalidades)
-Teste de segurança (proteção de dados ou tokens)
-Capturas de tela ou logs dos testes
-Isso mostra zelo com qualidade e confiabilidade do seu código.
+Este projeto foi desenvolvido com o objetivo de praticar desenvolvimento web através da criação de um site para um cliente fictício ou educacional.
 
-✅ Tecnologias e Linguagens
-Liste as linguagens e ferramentas base:
+O site inclui páginas institucionais, estrutura responsiva e boas práticas de desenvolvimento front-end.
 
-HTML, CSS, JavaScript
-Python, Node.js
-Azure, Firebase
-✅ Bibliotecas e Frameworks
-Destaque as principais libs/frameworks usados:
+---
 
-React, Vue.js, Django
-Tailwind, Bootstrap, TensorFlow.js
-Isso ajuda a quem quiser aprender ou usar as mesmas tecnologias.
+# 🎯 Objetivos
 
-✅ Pré-requisitos e Instalação
-Informe o que é necessário para rodar o projeto:
+- Praticar desenvolvimento de sites institucionais
+- Aplicar boas práticas de HTML, CSS e JavaScript
+- Simular um projeto real com cliente
+- Organizar estrutura de projeto profissional
 
-Node.js, Python, Docker
-Como clonar o repositório
-Como instalar dependências
-✅ Instruções de Uso
-Explique como rodar e usar o projeto:
+---
 
-Comando de start (npm run dev, por exemplo)
-Acesso via navegador
-Login padrão (caso exista)
-✅ Documentação
-Compartilhe os links ou resumos da documentação das tecnologias que você utilizou. Isso mostra que você estudou e serve de apoio a outros devs.
+# 🛠 Tecnologias Utilizadas
 
-✅ Licença
+- HTML5  
+- CSS3  
+- JavaScript  
 
-Uso educacional
+---
 
-✅ Contribuição
+# 📂 Estrutura do Projeto
+# 🚀 Como Executar o Projeto
 
+1. Clone o repositório:
 
-✅ Gitflow
+```bash
+git clone https://github.com/raphaelmelos/SMCar.git
 
-
-✅ Contribuidores
+cd nome-do-projeto
