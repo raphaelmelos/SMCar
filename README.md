@@ -1,5 +1,4 @@
-# SMCar
-# 📚 Nome do Projeto
+# 📚 SMCar
   
 Este projeto consiste no desenvolvimento de um site institucional para fins educacionais, simulando um projeto real para um cliente.
 
