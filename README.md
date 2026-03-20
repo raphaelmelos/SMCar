@@ -1,8 +1,7 @@
 # SMCar
 # 📚 Nome do Projeto
-
-Breve descrição do projeto.  
-Exemplo: Este projeto consiste no desenvolvimento de um site institucional para fins educacionais, simulando um projeto real para um cliente.
+  
+Este projeto consiste no desenvolvimento de um site institucional para fins educacionais, simulando um projeto real para um cliente.
 
 ---
 
@@ -27,7 +26,9 @@ O site inclui páginas institucionais, estrutura responsiva e boas práticas de 
 
 - HTML5  
 - CSS3  
-- JavaScript  
+- JavaScript
+- PHP
+- MySQL
 
 ---
 
