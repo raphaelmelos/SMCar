@@ -1,10 +1,79 @@
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.foto{
+    width: 300px;
+    justify-items: space-between;
+    border: #0e41e7 solid 1px;
+}
+
+.div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    background-color: rgb(161, 194, 212);
+}
+
 .principalCar {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-}
+    height: 200px;    width: 100%;}
 
 .principalCar img {
+    width: 400px;
+    max-width: 100%;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+#saiba-mais {
+    align-self: center;
+    font-size: 1.5em;
+    width: 120px;
+    background-color: black;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+h4 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    width: 100%;
+}
+
+#condicao {
+    align-self: center;
+    font-size: 1.4em;
+    width: 180px;
+    height: 30px;
+    background-color: rgb(3, 27, 245);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+#preco{
+    font-size: 1.4em;
+    margin: auto;
+}
+
+h3{
+    text-align: top;
 }
