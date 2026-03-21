@@ -1,0 +1,76 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #dcdcdc;
+}
+
+
+.topo {
+    background-color: #1e88e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 80px; 
+}
+
+
+.logo img {
+    height: 100%;
+    max-height: 90px;
+}
+
+
+.busca {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.busca input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.busca button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #1565c0;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.busca button:hover {
+    background-color: #0d47a1;
+}
+
+
+.redes img {
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.menu {
+    background-color: #dcdcdc;
+    text-align: right;
+    padding: 15px 40px;
+}
+
+.menu a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #1e88e5;
+}
