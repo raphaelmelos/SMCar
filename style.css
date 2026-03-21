@@ -1,0 +1,17 @@
+.instagram{
+    width: 10%;
+    
+
+}
+.whatsapp{
+    width: 10%;
+}
+.foot{
+    display: flex;
+    
+}
+footer{
+    background-color:  #008aff;
+    max-height: 100%;
+    height: 200;
+}
