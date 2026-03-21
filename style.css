@@ -6,12 +6,17 @@
 .whatsapp{
     width: 10%;
 }
+
 .foot{
     display: flex;
+
     
 }
 footer{
     background-color:  #008aff;
-    max-height: 100%;
-    height: 200;
+    justify-content: space-around;
+}
+
+.separar{
+    justify-content: space-around;
 }
