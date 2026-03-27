@@ -1,25 +1,8 @@
-.instagram{
-    width: 10%;
-    
-
-}
-.whatsapp{
-    width: 10%;
-}
-
-.foot{
-    display: flex;
-
-    
-}
 footer{
     background-color:  #008aff;
     justify-content: space-around;
 }
 
-.separar{
-    justify-content: space-around;
-}
 main {
     display: flex;
     flex-direction: row;
@@ -98,4 +81,26 @@ h4 {
 
 h3{
     text-align: top;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.instagram,
+.whatsapp {
+    width: 30px;
+    padding-bottom: 10px;
 }
