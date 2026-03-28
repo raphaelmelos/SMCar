@@ -1,5 +1,4 @@
-
-
+<?php
 function pesquisar($termo) {
     // Array com dados de exemplo
     $dados = [
