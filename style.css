@@ -1,3 +1,190 @@
+
+footer{
+    background-color:  #008aff;
+    justify-content: space-around;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.foto{
+    width: 300px;
+    justify-items: space-between;
+    border: #0e41e7 solid 1px;
+}
+
+.div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    background-color: rgb(161, 194, 212);
+}
+
+.principalCar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;    width: 100%;}
+
+.principalCar img {
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+#saiba-mais {
+    align-self: center;
+    font-size: 1.5em;
+    width: 120px;
+    background-color: black;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+h4 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    width: 100%;
+}
+
+#condicao {
+    align-self: center;
+    font-size: 1.4em;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(3, 27, 245);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+#preco{
+    font-size: 1.4em;
+    margin: auto;
+}
+
+h3{
+    text-align: top;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.instagram,
+.whatsapp {
+    width: 30px;
+    padding-bottom: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #dcdcdc;
+}
+
+.topoHeader {
+    background-color: #1e88e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 80px; 
+}
+
+.logoHeader img {
+    height: 100%;
+    max-height: 70px;
+    padding: 20px;
+}
+
+.buscaHeader {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.buscaHeader input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.buscaHeader button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #1565c0;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.buscaHeader button:hover {
+    background-color: #0d47a1;
+}
+
+
+.redesHeader img {
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.menuHeader {
+    background-color: #dcdcdc;
+    text-align: right;
+    padding: 15px 40px;
+}
+
+.menuHeader a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.menuHeader a:hover {
+    color: #1e88e5;
+}
+ 
+.buscaHeader svg {
+    width: 100%;
+    height: 14px;
+
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
