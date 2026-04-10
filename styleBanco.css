@@ -229,3 +229,7 @@ body {
     width: 40px;
   
 }
+footer{
+    background-color:  #008aff;
+    justify-content: space-around;
+}
