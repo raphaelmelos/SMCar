@@ -1,3 +1,9 @@
+<?php
+include_once './include/conexao.php';
+
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -16,13 +22,15 @@
     </div>
 
     <div class="buscaHeader">
-      <input type="text" placeholder="Buscar veículos...">
-      <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-          <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
-          <path
-            d="m17.06 14.94-2.8-1.34A6.96 6.96 0 0 0 16 9c0-3.86-3.14-7-7-7S2 5.14 2 9s3.14 7 7 7c1.76 0 3.37-.66 4.6-1.74l1.34 2.8 5 5 2.12-2.12zM9 14c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5">
-          </path>
-        </svg></button>
+      <div class="buscaInput">
+        <input type="text" placeholder="Buscar veículos...">
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+            <path
+              d="m17.06 14.94-2.8-1.34A6.96 6.96 0 0 0 16 9c0-3.86-3.14-7-7-7S2 5.14 2 9s3.14 7 7 7c1.76 0 3.37-.66 4.6-1.74l1.34 2.8 5 5 2.12-2.12zM9 14c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5">
+            </path>
+          </svg></button>
+      </div>
     </div>
 
     <div class="redesHeader">
@@ -45,7 +53,17 @@
   <main>
 
     <div class="principalCar">
-      <img src="./assests/carro.png" alt="Peugeot 206">
+      <?php
+      $sql = "SELECT * FROM Veiculos WHERE Destaque = 1 LIMIT 1";
+      $result = mysqli_query($conexao, $sql);
+      if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+          echo '<img src="./assests/' . $row['Foto'] . '" alt="' . $row['Descricao'] . '">';
+        }
+      } else {
+        echo '<p>Nenhum veículo em destaque no momento.</p>';
+      }
+      ?>
     </div>
 
     <h4><strong>Nossos destaques</strong></h4>
