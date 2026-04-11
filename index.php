@@ -43,7 +43,7 @@ include_once './include/conexao.php';
   </header>
 
   <nav class="menuHeader">
-    <a href="index.html">HOME</a>
+    <a href="index.php">HOME</a>
     <a href="sobre.html">SOBRE</a>
     <a href="estoque.html">ESTOQUE</a>
     <a href="banco.html">BANCO ASSOCIADOS</a>
