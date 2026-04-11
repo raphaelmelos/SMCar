@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS `SMCar`.`Veiculos` (
   `Preco` INT NULL,
   `Em_Estoque` TINYINT NULL,
   `Marca` VARCHAR(45) NULL,
+  `Destaque` TINYINT NULL,
   PRIMARY KEY (`id_Veiculos`))
 ENGINE = InnoDB;
 
@@ -43,7 +44,6 @@ CREATE TABLE IF NOT EXISTS `SMCar`.`Veiculos_Estoque` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 #Teste INSERT tabela veiculos
 INSERT INTO Veiculos 
