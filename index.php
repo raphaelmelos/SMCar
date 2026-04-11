@@ -73,7 +73,7 @@ include_once './include/conexao.php';
       <p>
         Peugeot 206 <br>
         Hatch (4 portas) <br>
-      <p id="condicao">Conição inperdível! </p> <br>
+      <p id="condicao">Condição imperdível! </p> <br>
       <p id="preco">R$ 11.500</p><br>
       <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
       </p>
@@ -84,7 +84,7 @@ include_once './include/conexao.php';
       <p>
         Peugeot 206 <br>
         Hatch (4 portas) <br>
-      <p id="condicao">Conição inperdível! </p> <br>
+      <p id="condicao">Condição imperdível! </p> <br>
       <p id="preco">R$ 11.500</p><br>
       <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
       </p>
@@ -95,7 +95,7 @@ include_once './include/conexao.php';
       <p>
         Peugeot 206 <br>
         Hatch (4 portas) <br>
-      <p id="condicao">Conição inperdível! </p> <br>
+      <p id="condicao">Condição imperdível! </p> <br>
       <p id="preco">R$ 11.500</p><br>
       <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
       </p>
@@ -106,7 +106,7 @@ include_once './include/conexao.php';
       <p>
         Peugeot 206 <br>
         Hatch (4 portas) <br>
-      <p id="condicao">Conição inperdível! </p> <br>
+      <p id="condicao">Condição imperdível! </p> <br>
       <p id="preco">R$ 11.500</p><br>
       <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
       </p>
@@ -117,7 +117,7 @@ include_once './include/conexao.php';
       <p>
         Peugeot 206 <br>
         Hatch (4 portas) <br>
-      <p id="condicao">Conição inperdível! </p> <br>
+      <p id="condicao">Condição imperdível! </p> <br>
       <p id="preco">R$ 11.500</p><br>
       <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
       </p>
@@ -128,7 +128,7 @@ include_once './include/conexao.php';
       <p>
         Peugeot 206 <br>
         Hatch (4 portas) <br>
-      <p id="condicao">Conição inperdível! </p> <br>
+      <p id="condicao">Condição imperdível! </p> <br>
       <p id="preco">R$ 11.500</p><br>
       <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
       </p>
