@@ -1,0 +1,133 @@
+CREATE DATABASE IF NOT EXISTS SMCar;
+USE `SMCar` ;
+
+CREATE TABLE IF NOT EXISTS `SMCar`.`Veiculos` (
+  `id_Veiculos` INT NOT NULL AUTO_INCREMENT,
+  `Home` TINYINT NULL,
+  `Ano` INT NULL,
+  `Kms` INT NULL,
+  `Cambio` VARCHAR(45) NULL,
+  `Descricao` MEDIUMTEXT NULL,
+  `Foto` VARCHAR(255) NULL,
+  `Cor` VARCHAR(45) NULL,
+  `Carroceria` VARCHAR(45) NULL,
+  `Preco` INT NULL,
+  `Em_Estoque` TINYINT NULL,
+  `Marca` VARCHAR(45) NULL,
+  PRIMARY KEY (`id_Veiculos`))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `SMCar`.`Estoque` (
+  `id_Estoque` INT NOT NULL AUTO_INCREMENT,
+  `Descricao` MEDIUMTEXT NULL,
+  `Preco` INT NULL,
+  PRIMARY KEY (`id_Estoque`))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `SMCar`.`Veiculos_Estoque` (
+  `id_Estoque` INT NULL,
+  `id_Veiculos` INT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  INDEX `FK_Veiculos_VeiculosEstoque` (`id_Veiculos` ASC) ,
+  INDEX `FK_Estoque_VeiculosEstoque` (`id_Estoque` ASC) ,
+  PRIMARY KEY (`Id`),
+  UNIQUE INDEX `UQ_VeiculosEstoque` (`id_Veiculos` ASC, `id_Estoque` ASC) ,
+  CONSTRAINT `FK_Veiculos_VeiculosEstoque`
+    FOREIGN KEY (`id_Veiculos`)
+    REFERENCES `SMCar`.`Veiculos` (`id_Veiculos`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK_Estoque_VeiculosEstoque`
+    FOREIGN KEY (`id_Estoque`)
+    REFERENCES `SMCar`.`Estoque` (`id_Estoque`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+#Teste INSERT tabela veiculos
+INSERT INTO Veiculos 
+(Home, Ano, Kms, Cambio, Descricao, Foto, Cor, Carroceria, Preco, Em_Estoque, Marca)
+VALUES
+(1, 2019, 48000, 'Automático', 'Veículo em excelente estado, revisões em dia', 'corolla2019.jpg', 'Preto', 'Sedan', 78000, 1, 'Toyota'),
+(1, 2021, 22000, 'Automático', 'Baixa quilometragem, único dono', 'civic2021.jpg', 'Prata', 'Sedan', 115000, 1, 'Honda'),
+(0, 2017, 70000, 'Manual', 'Econômico e bem conservado', 'gol2017.jpg', 'Branco', 'Hatch', 38000, 1, 'Volkswagen'),
+(0, 2020, 30000, 'Automático', 'SUV confortável, ideal para família', 'tracker2020.jpg', 'Azul', 'SUV', 92000, 1, 'Chevrolet'),
+(1, 2022, 12000, 'Automático', 'Semi-novo com garantia', 'hb20_2022.jpg', 'Vermelho', 'Hatch', 72000, 1, 'Hyundai');
+
+
+#Teste INSERT tabela estoque
+INSERT INTO Estoque 
+(Descricao, Preco)
+VALUES
+('Jogo de pneus aro 16', 2400),
+('Bateria 60Ah', 850),
+('Kit troca de óleo + filtros', 550),
+('Pastilhas de freio', 300),
+('Amortecedores dianteiros', 1200);
+
+
+#Teste de INSERT  tabela de Relacionamento (Veiculos_Estoque)
+#Insert escrito de maneira a simular manutenção/preparação de venda
+INSERT INTO Veiculos_Estoque 
+(id_Veiculos, id_Estoque)
+VALUES
+-- Corolla
+(1, 1),
+(1, 3),
+
+-- Civic
+(2, 2),
+(2, 3),
+(2, 4),
+
+-- Gol
+(3, 3),
+
+-- Tracker
+(4, 1),
+(4, 5),
+
+-- HB20
+(5, 2),
+(5, 3),
+(5, 4);
+
+
+#Select para conferir inserts
+SELECT * FROM Veiculos;
+SELECT * FROM Estoque;
+SELECT * FROM Veiculos_Estoque;
+
+
+#Select para teste de relacionamento
+SELECT 
+    v.id_Veiculos,
+    v.Marca,
+    v.Ano,
+    e.Descricao AS Item,
+    e.Preco AS Preco_Item
+FROM Veiculos v
+JOIN Veiculos_Estoque ve ON v.id_Veiculos = ve.id_Veiculos
+JOIN Estoque e ON ve.id_Estoque = e.id_Estoque;
+
+
+#Select quase pra mesma coisa do de cima, mas esse aqui tem uma restrição "WHERE"
+SELECT 
+    v.Marca,
+    v.Ano,
+    e.Descricao
+FROM Veiculos v
+JOIN Veiculos_Estoque ve ON v.id_Veiculos = ve.id_Veiculos
+JOIN Estoque e ON ve.id_Estoque = e.id_Estoque
+WHERE v.id_Veiculos = 1;
+
+
+#Select que verificaquantos itens cada veiculo tem
+SELECT 
+    v.id_Veiculos,
+    v.Marca,
+    COUNT(ve.id_Estoque) AS Total_Itens
+FROM Veiculos v
+LEFT JOIN Veiculos_Estoque ve ON v.id_Veiculos = ve.id_Veiculos
+GROUP BY v.id_Veiculos, v.Marca;
