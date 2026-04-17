@@ -25,7 +25,7 @@ include_once './include/home.php';
     <h4><strong>Nossos destaques</strong></h4>
 
     <div class="div">
-      <img class="foto" src="./assests/carro.png" alt="Peugeot 206">
+      <img class="foto" src="../assests/carro.png" alt="Peugeot 206">
       <p>
         Peugeot 206 <br>
         Hatch (4 portas) <br>
