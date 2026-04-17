@@ -14,5 +14,9 @@ if (!$conexao) {
 }
 
 
-
+?>
+<?php
+$buscar = $_GET["buscar"];
+$complementoSQL = (isset($_GET['buscar'])?'Where nome like("%'.$buscar.'%") and marcaid in()':"");
+$sql = "".$complementoSQL."".$buscar."";
 ?>

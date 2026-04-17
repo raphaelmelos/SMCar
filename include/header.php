@@ -18,7 +18,7 @@
 
     <div class="buscaHeader">
       <div class="buscaInput">
-        <form action="estoque.php" method="GET">
+        <form action="conecao.php" method="GET">
           <input type="text" placeholder="Buscar veículos..." name="buscar">
           <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
               <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
