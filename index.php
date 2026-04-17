@@ -47,7 +47,7 @@ include_once './include/conexao.php';
     <a href="sobre.html">SOBRE</a>
     <a href="estoque.html">ESTOQUE</a>
     <a href="banco.html">BANCO ASSOCIADOS</a>
-    <a href="#">CONTATOS</a>
+    <a href="contatos.html">CONTATOS</a>
   </nav>
 
   <main>
