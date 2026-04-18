@@ -3,6 +3,7 @@ USE `SMCar` ;
 
 CREATE TABLE IF NOT EXISTS `SMCar`.`Veiculos` (
   `id_Veiculos` INT NOT NULL AUTO_INCREMENT,
+  `Nome` VARCHAR (50),
   `Home` TINYINT NULL,
   `Ano` INT NULL,
   `Kms` INT NULL,
@@ -47,13 +48,14 @@ ENGINE = InnoDB;
 
 #Teste INSERT tabela veiculos
 INSERT INTO Veiculos 
-(Home, Ano, Kms, Cambio, Descricao, Foto, Cor, Carroceria, Preco, Em_Estoque, Marca, Destaque)
+
+(Nome, Home, Ano, Kms, Cambio, Descricao, Foto, Cor, Carroceria, Preco, Em_Estoque, Marca)
 VALUES
-(1, 2019, 48000, 'Automático', 'Veículo em excelente estado, revisões em dia', 'diablo.jpg', 'Preto', 'Sedan', 78000, 1, 'Toyota', 1),
-(1, 2021, 22000, 'Automático', 'Baixa quilometragem, único dono', 'civic2021.jpg', 'Prata', 'Sedan', 115000, 1, 'Honda', 1),
-(0, 2017, 70000, 'Manual', 'Econômico e bem conservado', 'gol2017.jpg', 'Branco', 'Hatch', 38000, 1, 'Volkswagen', 0),
-(0, 2020, 30000, 'Automático', 'SUV confortável, ideal para família', 'tracker2020.jpg', 'Azul', 'SUV', 92000, 1, 'Chevrolet', 0),
-(1, 2022, 12000, 'Automático', 'Semi-novo com garantia', 'hb20_2022.jpg', 'Vermelho', 'Hatch', 72000, 1, 'Hyundai', 1);
+('Corolla',1, 2019, 48000, 'Automático', 'Veículo em excelente estado, revisões em dia', 'corolla2019.jpg', 'Preto', 'Sedan', 78000, 1, 'Toyota'),
+('Civic',1, 2021, 22000, 'Automático', 'Baixa quilometragem, único dono', 'civic2021.jpg', 'Prata', 'Sedan', 115000, 1, 'Honda'),
+('Gol',0, 2017, 70000, 'Manual', 'Econômico e bem conservado', 'gol2017.jpg', 'Branco', 'Hatch', 38000, 1, 'Volkswagen'),
+('Tracker',0, 2020, 30000, 'Automático', 'SUV confortável, ideal para família', 'tracker2020.jpg', 'Azul', 'SUV', 92000, 1, 'Chevrolet'),
+('Hb20',1, 2022, 12000, 'Automático', 'Semi-novo com garantia', 'hb20_2022.jpg', 'Vermelho', 'Hatch', 72000, 1, 'Hyundai');
 
 
 #Teste INSERT tabela estoque
