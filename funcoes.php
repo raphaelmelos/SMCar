@@ -1,13 +1,14 @@
+
 <?php
-function buscarVeiculos($conn, $marca = null) {
+function buscarVeiculos($conexao, $marca = null) {
 
     if (!empty($marca)) {
-        $stmt = $conn->prepare("SELECT * FROM veiculos WHERE marca = ?");
+        $stmt = $conexao->prepare("SELECT * FROM veiculos WHERE marca = ?");
         $stmt->bind_param("s", $marca);
         $stmt->execute();
         return $stmt->get_result();
     } else {
-        return $conn->query("SELECT * FROM veiculos");
+        return $conexao->query("SELECT * FROM veiculos");
     }
 
 }
