@@ -1,3 +1,12 @@
+<?php
+include_once "./include/conexao.php";
+include_once "funcoes.php";
+
+$marca = isset($_GET['marca']) ? $_GET['marca'] : "";
+
+$result = buscarVeiculos($conexao, $marca);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -47,10 +56,36 @@
 
     <h1><Strong>Estoque de Veículos</Strong></h1>
 
+
     <main class="estoque">
+        
+     <p>Filtrar por marcas</p>   
+    <form method="GET">
+        <button name="marca" value="Volkswagen">Volkswagen</button>
+        <button name="marca" value="Fiat">Fiat</button>
+        <button name="marca" value="Chevrolet">Chevrolet</button>
+        <button name="marca" value="Hyundai">Hyundai</button>
+        <button name="marca" value="Toyota">Toyota</button>
+        <button name="marca" value="">Todas</button>
+    </form>
+
         <h2>Veículos Disponíveis</h2>
 
-        <div id="lista-veiculos"></div>
+        <div id="lista-veiculos">
+<?php
+while ($row = $result->fetch_assoc()) {
+?>
+    <div class="card">
+        <img src="<?php echo $row['imagem']; ?>" alt="">
+        <h3><?php echo $row['nome']; ?></h3>
+        <p><strong>Marca:</strong> <?php echo $row['marca']; ?></p>
+        <p><strong>Ano:</strong> <?php echo $row['ano']; ?></p>
+        <p><strong>Preço:</strong> R$ <?php echo $row['preco']; ?></p>
+    </div>
+<?php
+}
+?>
+</div>
     </main>
 
     <!-- FOOTER -->
