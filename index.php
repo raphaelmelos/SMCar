@@ -1,7 +1,5 @@
 <?php
 include_once './include/conecao.php';
-?>
-<?php
 include_once './include/home.php';
 ?>
   <main>
