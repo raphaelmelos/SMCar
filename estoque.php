@@ -1,7 +1,6 @@
 <?php
 include_once "./include/conexao.php";
 include_once "funcoes.php";
-include_once "./include/header.php";
 
 $marca = isset($_GET['marca']) ? $_GET['marca'] : "";
 
