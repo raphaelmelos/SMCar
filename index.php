@@ -1,7 +1,5 @@
 <?php
-include_once './include/conexao.php';
-
-
+include_once './include/conecao.php';
 ?>
 <?php
 include_once './include/home.php';
@@ -11,7 +9,7 @@ include_once './include/home.php';
     <div class="principalCar">
       <?php
       $sql = "SELECT * FROM Veiculos WHERE Destaque = 1 LIMIT 1";
-      $result = mysqli_query($conexao, $sql);
+      $result = mysqli_query($conecao, $sql);
       if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
           echo '<img src="./assests/' . $row['Foto'] . '" alt="' . $row['Descricao'] . '">';
