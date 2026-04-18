@@ -23,7 +23,7 @@ $sql = "SELECT * FROM veiculos
         WHERE modelo LIKE ?
            OR marca LIKE ?";
 
-$stmt = $conecao->prepare($sql);
+$stmt = $conexao->prepare($sql);
 
 $param = "%" . $buscar . "%";
 $stmt->bind_param("ss", $param, $param);
