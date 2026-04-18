@@ -1,6 +1,6 @@
 <?php
-include_once './include/conecao.php';
-include_once './include/home.php';
+include 'include/conecao.php';
+include 'include/header.php';
 ?>
   <main>
 
@@ -10,7 +10,7 @@ include_once './include/home.php';
       $result = mysqli_query($conecao, $sql);
       if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-          echo '<img src="./assests/' . $row['Foto'] . '" alt="' . $row['Descricao'] . '">';
+          echo '<img src="../assests/' . $row['Foto'] . '" alt="' . $row['Descricao'] . '">';
         }
       } else {
         echo '<p>Nenhum veículo em destaque no momento.</p>';
