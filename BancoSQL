@@ -48,6 +48,7 @@ ENGINE = InnoDB;
 
 #Teste INSERT tabela veiculos
 INSERT INTO Veiculos 
+
 (Nome, Home, Ano, Kms, Cambio, Descricao, Foto, Cor, Carroceria, Preco, Em_Estoque, Marca)
 VALUES
 ('Corolla',1, 2019, 48000, 'Automático', 'Veículo em excelente estado, revisões em dia', 'corolla2019.jpg', 'Preto', 'Sedan', 78000, 1, 'Toyota'),
