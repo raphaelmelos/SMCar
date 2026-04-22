@@ -16,21 +16,21 @@ if (!$conexao) {
 // ==========================
 // BUSCA
 // ==========================
-$buscar = $_GET['buscar'] ?? '';
+// $buscar = $_GET['buscar'] ?? '';
 
-// SQL com Prepared Statement
-$sql = "SELECT * FROM veiculos
-        WHERE modelo LIKE ?
-           OR marca LIKE ?";
+// // SQL com Prepared Statement
+// $sql = "SELECT * FROM veiculos
+//         WHERE modelo LIKE ?
+//            OR marca LIKE ?";
 
-$stmt = $conexao->prepare($sql);
+// $stmt = $conexao->prepare($sql);
 
-$param = "%" . $buscar . "%";
-$stmt->bind_param("ss", $param, $param);
+// $param = "%" . $buscar . "%";
+// $stmt->bind_param("ss", $param, $param);
 
-$stmt->execute();
+// $stmt->execute();
 
-$resultado = $stmt->get_result();
-?>
+// $resultado = $stmt->get_result();
+// ?>
 
 

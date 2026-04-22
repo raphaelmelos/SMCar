@@ -6,11 +6,11 @@ include 'include/header.php';
 
     <div class="principalCar">
       <?php
-      $sql = "SELECT * FROM Veiculos WHERE Destaque = 1 LIMIT 1";
+      $sql = "SELECT * FROM Veiculos WHERE Destaque = 2 LIMIT 1";
       $result = mysqli_query($conexao, $sql);
       if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-          echo '<img src="../assests/' . $row['Foto'] . '" alt="' . $row['Descricao'] . '">';
+          echo '<img src="assests/' . $row['Foto'] . '" alt="' . $row['Descricao'] . '">';
         }
       } else {
         echo '<p>Nenhum veículo em destaque no momento.</p>';
