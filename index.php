@@ -10,7 +10,7 @@ include 'include/header.php';
       $result = mysqli_query($conexao, $sql);
       if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-          echo '<img src="assests/' . $row['Foto'] . '" alt="' . $row['Descricao'] . '">';
+          echo '<img src="./assests/' . $row['Foto'] . '" alt="' . $row['Descricao'] . '">';
         }
       } else {
         echo '<p>Nenhum veículo em destaque no momento.</p>';
@@ -32,7 +32,7 @@ include 'include/header.php';
     
     <div class="div">
       <img class="foto"
-         src="assests/<?php echo $veiculos[$i]['Foto']; ?>">
+         src="./assests/<?php echo $veiculos[$i]['Foto']; ?>">
     <p>
         <?php echo $veiculos[$i]['Marca']; ?> <br>
         <?php echo $veiculos[$i]['Carroceria']; ?>
