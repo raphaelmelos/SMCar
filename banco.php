@@ -1,3 +1,7 @@
+<?php
+include 'include/conexao.php';
+include 'include/header.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,36 +12,6 @@
 </head>
 
 <body>
-
-    <!-- HEADER -->
-    <header class="topo">
-        <div class="logo">
-            <img src="./assests/logo2.png" alt="SMCar">
-        </div>
-
-        <div class="busca">
-            <input type="text" placeholder="Buscar veículos...">
-            <button>🔍</button>
-        </div>
-
-        <div class="redes">
-            <a href="https://wa.me/5551994109429" target="_blank">
-                <img src="./assests/pngtree-whatsapp-phone-icon-png-image_6315989.png" alt="WhatsApp"></a>
-
-            <a href="https://github.com/eisandromc" target="_blank">
-                <img src="./assests/Instagram_icon.png" alt="Instagram"></a>
-        </div>
-    </header>
-
-    <!-- MENU -->
-    <nav class="menuHeader">
-        <a href="index.html">HOME</a>
-        <a href="sobre.html">SOBRE</a>
-        <a href="estoque.html">ESTOQUE</a>
-        <a href="banco.html">BANCO ASSOCIADOS</a>
-        <a href="contatos.html">CONTATOS</a>
-    </nav>
-
     <!-- BANCOS PARCEIROS -->
     <section class="bancos">
         <h2><strong>Bancos Parceiros</strong></h2>
