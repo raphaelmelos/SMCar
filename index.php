@@ -20,71 +20,32 @@ include 'include/header.php';
 
     <h4><strong>Nossos destaques</strong></h4>
 
+    <?php
+      $sql = "SELECT * FROM Veiculos WHERE Destaque = 1 LIMIT 6";
+      $result = mysqli_query($conexao, $sql);
+      $veiculos = [];
+      while ($row = mysqli_fetch_assoc($result)) {
+        $veiculos[] = $row;
+        }
+      for ($i = 0; $i < count($veiculos); $i++) {
+    ?>
+    
     <div class="div">
-      <img class="foto" src="../assests/carro.png" alt="Peugeot 206">
-      <p>
-        Peugeot 206 <br>
-        Hatch (4 portas) <br>
-      <p id="condicao">Condição imperdível! </p> <br>
-      <p id="preco">R$ 11.500</p><br>
-      <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
-      </p>
-    </div>
+      <img class="foto"
+         src="assests/<?php echo $veiculos[$i]['Foto']; ?>">
+    <p>
+        <?php echo $veiculos[$i]['Marca']; ?> <br>
+        <?php echo $veiculos[$i]['Carroceria']; ?>
+    </p>
+    <p id="condicao">Condição imperdível!</p>
+    <p id="preco">
+        R$ <?php echo number_format($veiculos[$i]['Preco'],0,",","."); ?>
+    </p>
+</div>
+<?php 
+} 
+?>
 
-    <div class="div">
-      <img class="foto" src="./assests/carro.png" alt="Peugeot 206">
-      <p>
-        Peugeot 206 <br>
-        Hatch (4 portas) <br>
-      <p id="condicao">Condição imperdível! </p> <br>
-      <p id="preco">R$ 11.500</p><br>
-      <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
-      </p>
-    </div>
-
-    <div class="div">
-      <img class="foto" src="./assests/carro.png" alt="Peugeot 206">
-      <p>
-        Peugeot 206 <br>
-        Hatch (4 portas) <br>
-      <p id="condicao">Condição imperdível! </p> <br>
-      <p id="preco">R$ 11.500</p><br>
-      <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
-      </p>
-    </div>
-
-    <div class="div">
-      <img class="foto" src="./assests/carro.png" alt="Peugeot 206">
-      <p>
-        Peugeot 206 <br>
-        Hatch (4 portas) <br>
-      <p id="condicao">Condição imperdível! </p> <br>
-      <p id="preco">R$ 11.500</p><br>
-      <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
-      </p>
-    </div>
-
-    <div class="div">
-      <img class="foto" src="./assests/carro.png" alt="Peugeot 206">
-      <p>
-        Peugeot 206 <br>
-        Hatch (4 portas) <br>
-      <p id="condicao">Condição imperdível! </p> <br>
-      <p id="preco">R$ 11.500</p><br>
-      <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
-      </p>
-    </div>
-
-    <div class="div">
-      <img class="foto" src="./assests/carro.png" alt="Peugeot 206">
-      <p>
-        Peugeot 206 <br>
-        Hatch (4 portas) <br>
-      <p id="condicao">Condição imperdível! </p> <br>
-      <p id="preco">R$ 11.500</p><br>
-      <p id="saiba-mais"><strong> saiba mais! </strong> </p><br>
-      </p>
-    </div>
 
   </main>
   <footer>
