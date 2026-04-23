@@ -18,7 +18,7 @@ include 'include/header.php';
 
     <main class="containerSobre">
         <div class="leftSobre">
-            <img src="/assests/concessionaria.jpeg" alt="Concessionária" class="concessionaria-image">
+            <img src="./assests/concessionaria.jpeg" alt="Concessionária" class="concessionaria-image">
             <h2>Nossa História</h2>
             <p>A história da SM Car não começa em um escritório moderno, mas sim sob o capô de um velho motor, entre o
                 cheiro de graxa e o som das ferramentas. Fundada em 2020, ela é a realização do sonho de um pai que
@@ -33,7 +33,7 @@ include 'include/header.php';
                 confiança de quem faz negócio com um grande amigo.</p>
         </div>
         <div class="rightSobre">
-            <img src="/assests/familia.jpg" alt="Família" class="family-image">
+            <img src="./assests/familia.jpg" alt="Família" class="family-image">
             <h2>Missão, Visão e Valores</h2>
             <p>Ser a concessionária de referência na região, reconhecida não apenas pelo volume de vendas, mas por ser o
                 destino de confiança para gerações de motoristas. Queremos que o filho que hoje nos visita compre seu

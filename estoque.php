@@ -20,7 +20,34 @@ include 'include/header.php';
     <main class="estoque">
         <h2>Veículos Disponíveis</h2>
 
-        <div id="lista-veiculos"></div>
+    <div id="lista-veiculos">
+    <?php
+      $sql = "SELECT * FROM Veiculos";
+      $result = mysqli_query($conexao, $sql);
+      $veiculos = [];
+      while ($row = mysqli_fetch_assoc($result)) {
+        $veiculos[] = $row;
+        }
+      for ($i = 0; $i < count($veiculos); $i++) {
+    ?>
+    
+    <div class="div">
+      <img class="foto"
+         src="./assests/<?php echo $veiculos[$i]['Foto']; ?>">
+    <p>
+        <?php echo $veiculos[$i]['Marca']; ?> <br>
+        <?php echo $veiculos[$i]['Carroceria']; ?>
+    </p>
+    <p id="condicao">Condição imperdível!</p>
+    <p id="preco">
+        R$ <?php echo number_format($veiculos[$i]['Preco'],0,",","."); ?>
+    </p>
+</div>
+<?php 
+} 
+?>
+
+        </div>
     </main>
 
     <!-- FOOTER -->
@@ -48,67 +75,7 @@ include 'include/header.php';
 
         </div>
     </footer>
-    <!-- SCRIPT -->
-    <script>
-        const veiculos = [
-            {
-                id: 1,
-                nome: "Diablo",
-                marca: "Lamborghini",
-                ano: 1998,
-                preco: 2.700000,
-                imagem: "img/diablo.jpg"
-            },
-            {
-                id: 2,
-                nome: "NSX",
-                marca: "Honda",
-                ano: 1990,
-                preco: 3.200000,
-                imagem: "img/nsx.jpg"
-            },
-            {
-                id: 3,
-                nome: "Testarossa",
-                marca: "Ferrari",
-                ano: 1990,
-                preco: 2.700000,
-                imagem: "img/testarossa.png"
-            },
-            {
-                id: 4,
-                nome: "959",
-                marca: "Porsche",
-                ano: 1989,
-                preco: 2000000,
-                imagem: "img/porsche.jpg"
-            }
-        ];
 
-        function listarVeiculos() {
-            const lista = document.getElementById("lista-veiculos");
-            lista.innerHTML = "";
-
-            for (let i = 0; i < veiculos.length; i++) {
-                const v = veiculos[i];
-
-                const card = document.createElement("div");
-                card.classList.add("card");
-
-                card.innerHTML = `
-            <img src="${v.imagem}" alt="${v.nome}">
-            <h3>${v.nome}</h3>
-            <p><strong>Marca:</strong> ${v.marca}</p>
-            <p><strong>Ano:</strong> ${v.ano}</p>
-            <p><strong>Preço:</strong> R$ ${v.preco}</p>
-        `;
-
-                lista.appendChild(card);
-            }
-        }
-
-        listarVeiculos();
-    </script>
 
 </body>
 
