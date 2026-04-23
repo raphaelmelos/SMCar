@@ -42,8 +42,8 @@
 
   <nav class="menuHeader">
     <a href="index.php">HOME</a>
-    <a href="sobre.html">SOBRE</a>
-    <a href="estoque.html">ESTOQUE</a>
-    <a href="banco.html">BANCO ASSOCIADOS</a>
-    <a href="contatos.html">CONTATOS</a>
+    <a href="sobre.php">SOBRE</a>
+    <a href="estoque.php">ESTOQUE</a>
+    <a href="banco.php">BANCO ASSOCIADOS</a>
+    <a href="contato.php">CONTATOS</a>
   </nav>
