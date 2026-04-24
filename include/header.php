@@ -13,7 +13,7 @@
 <body>
   <header class="topoHeader">
     <div class="logoHeader">
-      <a href="index.html"><img src="./assests/logo2.png" SMCar></a>
+      <a href="index.html"><img src="./assests/logo2.png" alt="SMCar"></a>
     </div>
 
     <div class="buscaHeader">
