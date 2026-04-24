@@ -46,7 +46,6 @@ include 'include/header.php';
 } 
 ?>
 
-
   </main>
   <footer>
     <div class="footer-container">
