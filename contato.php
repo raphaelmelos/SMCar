@@ -2,8 +2,8 @@
 include 'include/conexao.php';
 include 'include/header.php';
 ?>
-
-  <main>
+<link rel="stylesheet" href="style.css">
+  <main class="contatoPagina">
 
     <h1>Contatos para SMCar</h1>
 
